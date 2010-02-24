@@ -1,0 +1,12 @@
+#! /bin/sh
+MKDIR=`which mkdir`
+LN=`which ln`
+if [ -n "$SSH_AUTH_SOCK" ]; then
+    if [ ! -d "$HOME/.screen" ]; then
+        ${MKDIR} -p "$HOME/.screen"
+    fi
+
+    if [ -z "$WINDOW" ]; then
+        ${LN} -fs "$SSH_AUTH_SOCK" "$HOME/.screen/ssh-agent-screen-$HOST"
+    fi
+fi
