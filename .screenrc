@@ -20,9 +20,9 @@ attrcolor i "+b"
 defbce on
 
 # buttom status bar
-caption always "%{=u .B} %-w%<%{=ub .r}>%n.%t<%{=u .B}%+w"
+caption always "%{=u .B} %-w%<%{=ub .r}[%n.%t]%{=u .B}%+w"
 hardstatus alwaysignore
-hardstatus alwayslastline "%{= .K} [%l]%<%=%{= .W}%=@%H%=    %=%{= .K}[%e ]%{= .m} %{= .y}%Y/%m/%d%{= .m} %C %A"
+hardstatus alwayslastline "%{= .K} [%l]%<%=%{= .W}%=@%H%=    %=%{= .K}[%e ]%{= .m} %{= .y}%Y/%m/%d%{= .m} %C:%s %A"
 
 # C + left : prev
 # C + right : next

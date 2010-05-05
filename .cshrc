@@ -1,32 +1,8 @@
-alias	iamben	'/usr/bin/ssh -24CA -p222 iamben@iamben.csie.net'
-alias	csduty	'/usr/bin/ssh -24CA csduty'
-alias   g       '/usr/bin/grep --color=always'
-alias	less	'/usr/bin/less -r'
-
-#colorized ls
-if ( $OSTYPE != "solaris" ) then
-	alias   ls      '/bin/ls -G'
-endif
-
-setenv LC_ALL en_US.UTF-8
-setenv LANG en_US.UTF-8
-setenv LESSCHARDEF "8bcccbcc18b95.."
-setenv EDITOR vim
-setenv PAGER less
-
-set autolist
-
-#screen auth sock
-if ( $OSTYPE != "solaris" ) then
-	$HOME/bin/setScreenSshAgent
-	if ($?WINDOW) then
-    		setenv SSH_AUTH_SOCK "$HOME/.screen/ssh-agent-screen-$HOST"
-	endif
-endif
-
-if ( $OSTYPE == "FreeBSD" ) then
-	setenv TERMCAP 'xterm|xterm-color:Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm:tc=xterm-xfree86:'
-endif
+setenv	EDITOR	vim
+setenv	PAGER	less
+set	autolist
+complete sudo 'p/1/c/'
+complete man 'p/1/c/'
 
 #home , end , and delete key mapping
 if( $?term ) then
@@ -41,9 +17,9 @@ if( $?term ) then
 	endif
 endif
 
-if ($?prompt) then
+if ( $?prompt ) then
 	# An interactive shell -- set some stuff up
-	set prompt = "(%T) %{\033[1;34m%}%n%{\033[m%}@%{\033[1;32m%}%m%{\033[m%}[ %{\033[1;31m%}%~%{\033[m%} ]# "
+	set prompt = "(%T) %{\033[1;34m%}%n%{\033[m%}@%{\033[1;32m%}%m%{\033[m%}:%{\033[1;31m%}%~%{\033[m%} # "
 
 	set filec
 	set history = 100
@@ -54,4 +30,19 @@ if ($?prompt) then
 		bindkey -k up history-search-backward
 		bindkey -k down history-search-forward
 	endif
+endif
+
+#os configuration
+if( -f $HOME/.csh/os/`uname -s`.cshrc ) then
+	source $HOME/.csh/os/`uname -s`.cshrc
+endif
+
+#hosts configuration
+if( -f $HOME/.csh/hosts/$HOST.cshrc ) then
+	source $HOME/.csh/hosts/$HOST.cshrc
+endif
+
+#aliases
+if( -f $HOME/.csh/aliases ) then
+	source $HOME/.csh/aliases
 endif
