@@ -1,7 +1,7 @@
 #
 setenv	LC_ALL	en_US.UTF-8
 setenv	LANG	en_US.UTF-8
-alias   g       '/bin/grep --color=always'
+alias   g       '/bin/grep --mmap --color=always'
 
 $HOME/bin/setScreenSshAgent
 if ($?WINDOW) then
