@@ -28,7 +28,7 @@ alias	linux5	'ssh -24CA changlp@linux5.cs.nctu.edu.tw'
 alias	linux6	'ssh -24CA changlp@linux6.cs.nctu.edu.tw'
 alias	linux7	'ssh -24CA changlp@linux7.cs.nctu.edu.tw'
 alias	help	'ssh -24CA -p222 changlp@help.cs.nctu.edu.tw'
-alias	alumni.cs	'ssh -24CA changlp@alumni.cs.nctu.edu.tw'
+alias	alumni	'ssh -24CA changlp@alumni.cs.nctu.edu.tw'
 
 #cis
 alias	cishome	'ssh -24CA changlp@cishome.cis.nctu.edu.tw'
