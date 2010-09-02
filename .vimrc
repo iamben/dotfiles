@@ -19,6 +19,7 @@ map <F7> :!exctags -R -f .tags --c++-kinds=+pl --c-kinds=+l --fields=+iaS --extr
 map <F10> <ESC>:tabn<CR>
 map <F9> <ESC>:tabp<CR>
 map <F8> <ESC>:TlistToggle<CR>
+map <F5> <ESC>:e ++enc=big5<CR>:set tenc=big5<CR>
 
 set laststatus=2
 set statusline=%4*%<\ %2*[%F]
