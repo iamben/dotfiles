@@ -19,7 +19,7 @@ endif
 
 if ( $?prompt ) then
 	# An interactive shell -- set some stuff up
-	set prompt = "(%T) %{\033[1;34m%}%n%{\033[m%}@%{\033[1;32m%}%m%{\033[m%}:%{\033[1;31m%}%~%{\033[m%} # "
+	set prompt = "(%T) %{\033[1;34m%}%n%{\033[m%}@%{\033[1;32m%}%m%{\033[m%}:%{\033[1;31m%}%~%{\033[m%} %# "
 
 	set filec
 	set history = 100
