@@ -21,13 +21,19 @@ map <F9> <ESC>:tabp<CR>
 map <F8> <ESC>:TlistToggle<CR>
 map <F5> <ESC>:e ++enc=big5<CR>:set tenc=big5<CR>
 
+" (down)status line
 set laststatus=2
 set statusline=%4*%<\ %2*[%F]
 set statusline+=%4*\ %5*[%{&encoding} " encoding
 set statusline+=%{&fileformat}%{\"\".((exists(\"+bomb\")\ &&\ &bomb)?\",BOM\":\"\").\"\"}]%m
 set statusline+=%4*%=\ %6*%y%4*\ %3*%l%4*,\ %3*%c%4*\ \<\ %2*%P%4*\ \>
 
+" (up)tab line
 set showtabline=2
+
+" tab
+set softtabstop=4
+set shiftwidth=4
 
 "256 color scheme by yzlin
 set t_Co=256
