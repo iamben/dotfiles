@@ -3,6 +3,7 @@ setenv	PAGER	less
 set	autolist
 complete sudo 'p/1/c/'
 complete man 'p/1/c/'
+complete which 'p/1/c/'
 
 #home , end , and delete key mapping
 if( $?term ) then
