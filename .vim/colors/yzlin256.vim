@@ -115,6 +115,8 @@ else
     hi StatusLineNC     cterm=NONE      ctermfg=244     ctermbg=235
     hi VertSplit        cterm=NONE      ctermfg=244     ctermbg=235
 
+    hi CursorLine	cterm=BOLD      ctermfg=NONE    ctermbg=17
+
     hi WildMenu         cterm=BOLD      ctermfg=253     ctermbg=61
 
     hi MBENormal                        ctermfg=247     ctermbg=235
