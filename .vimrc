@@ -29,7 +29,9 @@ map <F5> <ESC>:e ++enc=big5<CR>:set tenc=big5<CR>
 " (down)status line
 set laststatus=2
 set statusline=%4*%<\ %2*[%F]
-set statusline+=%4*\ %5*[%{&encoding} " encoding
+set statusline+=%4*\ %5*[enc=%{&encoding}, " encoding
+set statusline+=fenc=%{&fileencoding}, " file encoding
+set statusline+=tenc=%{&termencoding}, " term encoding
 set statusline+=%{&fileformat}%{\"\".((exists(\"+bomb\")\ &&\ &bomb)?\",BOM\":\"\").\"\"}]%m
 set statusline+=%4*%=\ %6*%y%4*\ %3*%l%4*,\ %3*%c%4*\ \<\ %2*%P%4*\ \>
 
