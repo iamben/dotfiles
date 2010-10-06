@@ -7,6 +7,11 @@ set nomodeline
 set tags=./.tags,~/.STLtags
 set fileencodings=ucs-bom,utf-8,sjis,prc,big5,latin1
 syntax on
+
+" highlight
+set hlsearch
+set incsearch
+
 "highlight Comment ctermfg=darkcyan
 "highlight Search term=reverse ctermbg=4 ctermfg=7
 set nocp
