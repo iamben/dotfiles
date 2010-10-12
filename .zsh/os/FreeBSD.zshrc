@@ -7,6 +7,6 @@ LC_ALL=en_US.UTF-8
 LANG=en_US.UTF-8
 
 $HOME/bin/setScreenSshAgent
-if [ -z $WINDOW ]; then
+if [ -n "$WINDOW" ]; then
 	SSH_AUTH_SOCK="$HOME/.screen/ssh-agent-screen-$HOST"
 fi
