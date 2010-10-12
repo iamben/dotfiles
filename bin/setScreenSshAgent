@@ -1,4 +1,5 @@
-#! /bin/sh
+#!/bin/sh
+
 MKDIR=`which mkdir`
 LN=`which ln`
 if [ -n "$SSH_AUTH_SOCK" ]; then
