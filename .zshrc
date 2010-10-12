@@ -11,8 +11,17 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+#setopts
+setopt MENUCOMPLETE
+setopt ALL_EXPORT
+
+#vars
 PROMPT="(%T) %{[1;34m%}%n%{[m%}@%{[1;32m%}%m%{[m%}:%{[1;31m%}%~%{[m%} %# "
 TERMCAP='xterm|xterm-color:Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm:tc=xterm-xfree86:'
+EDITOR='vim'
+
+#alias
+#alias vi=vim
 
 #key binding
 bindkey "[1~" beginning-of-line   # Home
