@@ -57,5 +57,3 @@ bindkey "^[[24~" kill
 #C-a (space) : list all window
 bind ' ' windowlist
 
-#login shell
-shell -zsh
