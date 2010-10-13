@@ -2,3 +2,8 @@
     name = Lung-Pin Chang
     email = changlp@cs.nctu.edu.tw
 
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
