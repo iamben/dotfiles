@@ -8,6 +8,7 @@ bindkey -e
 zstyle :compinstall filename '/home/iamben/.zshrc'
 
 autoload -Uz compinit
+autoload -Uz vcs_info
 compinit
 # End of lines added by compinstall
 
@@ -25,6 +26,29 @@ READNULLCMD='less'
 #alias
 #alias vi=vim
 
+#function
+# Emulate tcsh's backward-delete-word
+function tcsh-backward-delete-word () {
+    #local WORDCHARS="${WORDCHARS:s#/#}"
+    #local WORDCHARS='*?_[]~\/!#$%^<>|`@#$%^*()+?'
+    local WORDCHARS="${WORDCHARS:s#/#}"
+    zle backward-delete-word
+}
+ 
+function tcsh-backward-word () {
+    local WORDCHARS="${WORDCHARS:s#/#}"
+    zle emacs-backward-word
+}
+ 
+function tcsh-forward-word () {
+    local WORDCHARS="${WORDCHARS:s#/#}"
+    zle emacs-forward-word
+}
+ 
+zle -N tcsh-backward-delete-word
+zle -N tcsh-backward-word
+zle -N tcsh-forward-word
+ 
 #key binding
 bindkey "[1~" beginning-of-line   # Home
 bindkey "[4~" end-of-line	    # End
@@ -32,12 +56,11 @@ bindkey "[2~" overwrite-mode	    # Ins
 bindkey "[3~" delete-char	    # Delete
 bindkey "[A" history-search-backward	#up
 bindkey "[B" history-search-forward	#down
-#bindkey "^W"	backward-delete-word
-
-#aliases
-if [ -f $HOME/.zsh/aliases ]; then
-    source $HOME/.zsh/aliases
-fi
+# for escape backspace (delete a word) behavior similar to tcsh
+bindkey '^W' tcsh-backward-delete-word
+#for ctrl leftarrow and rightarrow navigation
+bindkey '^E' tcsh-backward-word
+bindkey 'F' tcsh-forward-word
 
 #os configuration
 if [ -f $HOME/.zsh/os/`uname -s`.zshrc ]; then
@@ -48,3 +71,9 @@ fi
 if [ -f $HOME/.zsh/hosts/$HOST.zshrc ]; then
     source $HOME/.zsh/hosts/$HOST.zshrc
 fi
+
+#misc
+if [ -f $HOME/.zsh/misc/*.zsh ]; then
+    source $HOME/.zsh/misc/*.zsh
+fi
+
