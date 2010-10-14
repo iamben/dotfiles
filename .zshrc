@@ -5,7 +5,7 @@ SAVEHIST=1000
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/iamben/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
 
 autoload -Uz compinit
 autoload -Uz vcs_info
@@ -60,13 +60,13 @@ bindkey '^E' tcsh-backward-word
 bindkey 'F' tcsh-forward-word
 
 #os configuration
-if [ -f $HOME/.zsh/os/`uname -s`.zshrc ]; then
-    source $HOME/.zsh/os/`uname -s`.zshrc
+if [ -f $HOME/.zsh/os/`uname -s`.zsh ]; then
+    source $HOME/.zsh/os/`uname -s`.zsh
 fi
 
 #hosts configuration
-if [ -f $HOME/.zsh/hosts/$HOST.zshrc ]; then
-    source $HOME/.zsh/hosts/$HOST.zshrc
+if [ -f $HOME/.zsh/hosts/$HOST.zsh ]; then
+    source $HOME/.zsh/hosts/$HOST.zsh
 fi
 
 #misc
