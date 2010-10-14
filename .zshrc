@@ -23,9 +23,6 @@ EDITOR='vim'
 PAGER='less'
 READNULLCMD='less'
 
-#alias
-#alias vi=vim
-
 #function
 # Emulate tcsh's backward-delete-word
 function tcsh-backward-delete-word () {

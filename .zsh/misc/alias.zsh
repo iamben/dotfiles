@@ -1,7 +1,14 @@
+##########################
+#   Global alias
+##########################
+alias	pwd='pwd -P'
+
+##########################
+#   ssh alias
+##########################
 #misc
 alias	iamben='ssh -24CA iamben@Archon.iamben.csie.net'
 alias   sslab='ssh -24CA -p222 iamben@sslab12.cs.nctu.edu.tw'
-
 #cs
 alias	csduty='ssh -24CA changlp@csduty.cs.nctu.edu.tw'
 alias	cshome='ssh -24CA changlp@cshome.cs.nctu.edu.tw'
@@ -33,11 +40,9 @@ alias	linux6='ssh -24CA changlp@linux6.cs.nctu.edu.tw'
 alias	linux7='ssh -24CA changlp@linux7.cs.nctu.edu.tw'
 alias	heLP='ssh -24CA -p222 changlp@help.cs.nctu.edu.tw'
 alias	alumni='ssh -24CA changlp@alumni.cs.nctu.edu.tw'
-
 #cis
 alias	cishome='ssh -24CA changlp@cishome.cis.nctu.edu.tw'
 alias	alumni.cis='ssh -24CA changlp@alumni.cis.nctu.edu.tw'
-
 #csie
 alias	magpie='ssh -24CA changlp@magpie.csie.nctu.edu.tw'
 alias	alumni.csie='ssh -24CA changlp@alumni.csie.nctu.edu.tw'
