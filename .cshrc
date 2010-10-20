@@ -33,6 +33,15 @@ if ( $?prompt ) then
 	endif
 endif
 
+#colorful man
+setenv LESS_TERMCAP_mb '[38;5;135m' # begin blinking
+setenv LESS_TERMCAP_md '[38;5;220m' # begin bold
+setenv LESS_TERMCAP_me '[0m' # end mode
+setenv LESS_TERMCAP_so '[38;5;225m' # begin standout-mode - info box
+setenv LESS_TERMCAP_se '[0m' # end standout-mode
+setenv LESS_TERMCAP_us '[2;1;4;32m' # begin underline
+setenv LESS_TERMCAP_ue '[0m' # end underline
+
 #os configuration
 if( -f $HOME/.csh/os/`uname -s`.cshrc ) then
 	source $HOME/.csh/os/`uname -s`.cshrc
