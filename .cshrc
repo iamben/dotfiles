@@ -1,3 +1,8 @@
+if ( -f /bin/zsh ) then
+    env SHELL=/bin/zsh /bin/zsh
+    logout
+endif
+
 setenv	EDITOR	vim
 setenv	PAGER	less
 set	autolist
@@ -55,10 +60,5 @@ endif
 #aliases
 if( -f $HOME/.csh/aliases ) then
 	source $HOME/.csh/aliases
-endif
-
-if ( -f /bin/zsh ) then
-    env SHELL=/bin/zsh /bin/zsh
-    logout
 endif
 
