@@ -1,0 +1,11 @@
+.csh
+.cshrc
+.gitconfig
+.muttrc
+.screenrc
+.ssh/authorized_keys
+.vim
+.vimrc
+.zsh
+.zshrc
+bin/setScreenSshAgent
