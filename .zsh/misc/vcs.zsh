@@ -41,10 +41,12 @@ rprompt_vcs_setup () {
 # get vcs_info to collect informations
   precmd(){ 
  
-    vcs_info
+    if [ "$PWD" != "$HOME" ]; then
+	vcs_info
 
-    # Print the VCS info
-    RPROMPT="${vcs_info_msg_0_}"
+	# Print the VCS info
+	RPROMPT="${vcs_info_msg_0_}"
+    fi
   }
 
 }
