@@ -1,9 +1,10 @@
 #!/bin/sh
-repo="confVCS"
+repo="`pwd | awk -F/ '{ print $NF }'`"
 
 if [ -z "$1" ]; then
     echo "Usage: Link.sh <action>"
     echo "action: (c)reate/(r)emove"
+    echo "Repo = $repo"
     exit
 fi
 
