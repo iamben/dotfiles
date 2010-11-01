@@ -1,7 +1,4 @@
-if ( -f /bin/zsh ) then
-    env SHELL=/bin/zsh /bin/zsh
-    logout
-endif
+if ( -f /bin/zsh && { tty -s } ) exec env SHELL=/bin/zsh /bin/zsh -l
 
 setenv	EDITOR	vim
 setenv	PAGER	less
