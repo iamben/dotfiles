@@ -54,5 +54,6 @@ rprompt_vcs_setup () {
 
 if [ -z "`vcs_info |& grep found`" ]; then
     rprompt_vcs_setup "$@"
+    #echo "VCS is currently disabled."
 fi
 
