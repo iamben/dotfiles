@@ -6,6 +6,7 @@ shell -$SHELL
 defutf8 on
 defc1 off
 defencoding utf8
+defscrollback 999            # default: 100
 
 
 # 256 Color Support
@@ -18,6 +19,7 @@ attrcolor i "+b"
 
 # erase background with current bg color
 defbce on
+
 
 # buttom status bar
 caption always "%{=u .B} %-w%<%{=ub .r}[%n.%t]%{=u .B}%+w"
