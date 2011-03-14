@@ -12,10 +12,6 @@ autoload -Uz vcs_info
 compinit
 # End of lines added by compinstall
 
-# completion
-# since error correction can be invoked by ^Xc, there's no need to set it again.
-zstyle ':completion:*' menu select
-
 #setopts
 setopt MENUCOMPLETE
 setopt ALL_EXPORT
