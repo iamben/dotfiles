@@ -1,6 +1,6 @@
 #
-LC_ALL=en_US.UTF-8
-LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 alias   g='/bin/grep --mmap --color=always'
 alias   ls='/bin/ls --color=auto'
 
