@@ -1,4 +1,8 @@
-if ( -f /bin/zsh && { tty -s } ) exec env SHELL=/bin/zsh /bin/zsh -l
+if ( -f /bin/zsh && { tty -s } ) then
+    echo "[==Zsh detected.==]"
+    echo "Type anything to use original shell or enter for zsh: "
+    if ( "$<" == "" ) exec env SHELL=/bin/zsh /bin/zsh -l
+endif
 
 setenv	EDITOR	vim
 setenv	PAGER	less
