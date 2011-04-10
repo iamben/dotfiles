@@ -23,11 +23,12 @@ let OmniCpp_DefaultNamespaces = ["std"]
 let Tlist_Exit_OnlyWindow=1
 let python_highlight_all = 1
 
-map <F7> :!exctags -R -f .tags --c++-kinds=+pl --c-kinds=+l --fields=+iaS --extra=+q .<CR>
-map <F10> <ESC>:tabn<CR>
-map <F9> <ESC>:tabp<CR>
-map <F8> <ESC>:TlistToggle<CR>
-map <F5> <ESC>:e ++enc=big5<CR>:set tenc=big5<CR>
+nnoremap <F5> <ESC>:e ++enc=big5<CR>:set tenc=big5<CR>
+nnoremap <F6> :GundoToggle<CR>
+nnoremap <F7> :!exctags -R -f .tags --c++-kinds=+pl --c-kinds=+l --fields=+iaS --extra=+q .<CR>
+nnoremap <F8> <ESC>:TlistToggle<CR>
+nnoremap <F9> :tabp<CR>
+nnoremap <F10> :tabn<CR>
 
 " (down)status line
 set laststatus=2
