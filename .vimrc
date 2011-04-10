@@ -1,3 +1,8 @@
+" Pathogen
+filetype off 
+call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
+
 set nocompatible
 set bs=2
 set nu
