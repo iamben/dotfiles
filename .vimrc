@@ -3,11 +3,18 @@ filetype off
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
+" tab (http://py.vaults.ca/~x/python_and_vim.html)
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set smarttab
+set expandtab
+set autoindent
+
 set nocompatible
 set bs=2
 set nu
 set cursorline
-set ai
 set nomodeline
 set tags=./.tags,~/.STLtags
 set encoding=utf-8
@@ -26,7 +33,7 @@ set nocp
 filetype plugin on
 let OmniCpp_DefaultNamespaces = ["std"]
 let Tlist_Exit_OnlyWindow=1
-let python_highlight_all = 1
+" let python_highlight_all = 1
 
 nnoremap <F5> <ESC>:e ++enc=big5<CR>:set tenc=big5<CR>
 nnoremap <F6> :GundoToggle<CR>
@@ -47,11 +54,11 @@ set statusline+=%4*%=\ %6*%y%4*\ %3*%l%4*,\ %3*%c%4*\ \<\ %2*%P%4*\ \>
 " (up)tab line
 set showtabline=2
 
-" tab
-set softtabstop=4
-set shiftwidth=4
-
 "256 color scheme by yzlin
 set t_Co=256
 colorscheme yzlin256
 
+" auto remove ttrailing spaces in python scripts(.py)
+autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
+" python smart ident
+autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
