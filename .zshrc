@@ -15,6 +15,7 @@ compinit
 #setopts
 setopt MENUCOMPLETE
 setopt ALL_EXPORT
+setopt correct
 
 #vars
 PROMPT="(%T) %{[1;34m%}%n%{[m%}@%{[1;32m%}%m%{[m%}:%{[1;31m%}%~%{[m%} %# "
