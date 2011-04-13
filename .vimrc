@@ -33,7 +33,7 @@ set nocp
 filetype plugin on
 let OmniCpp_DefaultNamespaces = ["std"]
 let Tlist_Exit_OnlyWindow=1
-" let python_highlight_all = 1
+let python_highlight_all = 1
 
 nnoremap <F5> <ESC>:e ++enc=big5<CR>:set tenc=big5<CR>
 nnoremap <F6> :GundoToggle<CR>
@@ -62,3 +62,6 @@ colorscheme yzlin256
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
 " python smart ident
 autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+
+" Neocomplete
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
