@@ -5,6 +5,7 @@ export TERMCAP='xterm|xterm-color:Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm:tc=xterm-
 export LESS="-Rf"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+export LSCOLORS="Exfxcxdxbxegedabagacad"
 
 HOST=$HOST $HOME/bin/setScreenSshAgent
 if [ -n "$WINDOW" ]; then
