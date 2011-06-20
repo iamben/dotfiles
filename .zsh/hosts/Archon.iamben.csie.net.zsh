@@ -3,4 +3,6 @@ PAGER='most'
 READNULLCMD='most'
 
 # pythonbrew
-source /home/iamben/.pythonbrew/etc/bashrc
+if [ -f $HOME/.pythonbrew/etc/bashrc ]; then
+    source /home/iamben/.pythonbrew/etc/bashrc
+fi
