@@ -1,7 +1,12 @@
-if ( -f /bin/zsh && { tty -s } ) then
-    echo "[==Zsh detected.==]"
+if ((-f /bin/zsh || -f /usr/local/bin/zsh) && { tty -s } ) then
+    echo "==Zsh Detected=="
     echo "Type anything to use original shell or enter for zsh: "
-    if ( "$<" == "" ) exec env SHELL=/bin/zsh /bin/zsh -l
+    if ( "$<" == "" ) then
+	if( -f /bin/zsh ) then
+	    exec env SHELL=/bin/zsh /bin/zsh -l
+	else
+	    exec env SHELL=/usr/local/bin/zsh /usr/local/bin/zsh -l
+    endif
 endif
 
 setenv	EDITOR	vim
