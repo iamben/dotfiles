@@ -6,6 +6,7 @@ if ((-f /bin/zsh || -f /usr/local/bin/zsh) && { tty -s } ) then
 	    exec env SHELL=/bin/zsh /bin/zsh -l
 	else
 	    exec env SHELL=/usr/local/bin/zsh /usr/local/bin/zsh -l
+	endif
     endif
 endif
 
