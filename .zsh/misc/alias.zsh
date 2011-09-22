@@ -9,6 +9,7 @@
 #misc
 alias	iamben='ssh -24CA iamben@Archon.iamben.nctucs.net'
 alias   sslab='ssh -24CA -p222 iamben@sslab12.cs.nctu.edu.tw'
+alias   win='ssh -24CA iamben@win.cs.nctu.edu.tw'
 #cs
 alias	csduty='ssh -24CA changlp@csduty.cs.nctu.edu.tw'
 alias	cshome='ssh -24CA changlp@cshome.cs.nctu.edu.tw'
