@@ -71,9 +71,14 @@ if [ -f $HOME/.zsh/hosts/$HOST.zsh ]; then
 fi
 
 #misc
-if [ -n "`ls $HOME/.zsh/misc/*.zsh`" ]; then
-    for z in `ls -1 $HOME/.zsh/misc/*.zsh`; do
-	source $z
+if [ -n "`ls $HOME/.zsh/misc/*`" ]; then
+    for z in `ls -1d $HOME/.zsh/misc/*`; do
+	if [ -f $z ]; then
+	    source $z
+	elif [ -d $z ]; then
+	    source $z/*.zsh
+	fi
     done
+else if [ -d ]
 fi
 
