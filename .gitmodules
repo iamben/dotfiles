@@ -1,6 +1,6 @@
 [submodule ".zsh/misc/zsh-syntax-highlighting"]
 	path = .zsh/misc/zsh-syntax-highlighting
-	url = https://github.com/nicoulaj/zsh-syntax-highlighting.git
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
 [submodule ".vim/bundle/vim-easymotion"]
 	path = .vim/bundle/vim-easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git
