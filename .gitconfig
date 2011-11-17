@@ -7,3 +7,8 @@
 	diff = auto
 	interactive = auto
 	status = auto
+[alias]
+	net = log --graph --oneline --all
+	ci = commit
+	co = checkout
+	st = status
