@@ -22,3 +22,9 @@
 [submodule ".vim/bundle/errormarker.vim"]
 	path = .vim/bundle/errormarker.vim
 	url = https://github.com/vim-scripts/errormarker.vim.git
+[submodule ".vim/bundle/Python-Syntax"]
+	path = .vim/bundle/Python-Syntax
+	url = https://github.com/vim-scripts/Python-Syntax.git
+[submodule ".vim/bundle/AutoComplPop"]
+	path = .vim/bundle/AutoComplPop
+	url = https://github.com/vim-scripts/AutoComplPop.git
