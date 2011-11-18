@@ -40,7 +40,7 @@ let python_highlight_all = 1
 nnoremap <F5> <ESC>:e ++enc=big5<CR>:set tenc=big5<CR>
 nnoremap <F6> :GundoToggle<CR>
 nnoremap <F7> :!exctags -R -f .tags --c++-kinds=+pl --c-kinds=+l --fields=+iaS --extra=+q .<CR>
-nnoremap <F8> <ESC>:TlistToggle<CR>
+nnoremap <F8> <ESC>:TagbarToggle<CR>
 nnoremap <F9> :tabp<CR>
 nnoremap <F10> :tabn<CR>
 
