@@ -19,3 +19,6 @@
 [submodule ".vim/bundle/AsyncCommand"]
 	path = .vim/bundle/AsyncCommand
 	url = https://github.com/pydave/AsyncCommand.git
+[submodule ".vim/bundle/errormarker.vim"]
+	path = .vim/bundle/errormarker.vim
+	url = https://github.com/vim-scripts/errormarker.vim.git
