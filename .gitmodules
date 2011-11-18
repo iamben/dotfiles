@@ -16,3 +16,6 @@
 [submodule ".vim/bundle/git-vim"]
 	path = .vim/bundle/git-vim
 	url = https://github.com/motemen/git-vim.git
+[submodule ".vim/bundle/AsyncCommand"]
+	path = .vim/bundle/AsyncCommand
+	url = https://github.com/pydave/AsyncCommand.git
