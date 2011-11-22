@@ -7,7 +7,7 @@
 #   ssh alias
 ##########################
 #misc
-alias	iamben='ssh -24CA iamben@Archon.iamben.nctucs.net'
+alias	iamben='ssh -24CA iamben@Archon.iamben.csie.net'
 alias   sslab='ssh -24CA -p222 iamben@sslab12.cs.nctu.edu.tw'
 alias   win='ssh -24CA iamben@win.cs.nctu.edu.tw'
 #cs
@@ -29,9 +29,6 @@ alias	csnews2='ssh -24CA changlp@csnews2.cs.nctu.edu.tw'
 alias	csnews3='ssh -24CA changlp@csnews3.cs.nctu.edu.tw'
 alias	sun1='ssh -24CA changlp@sun1.cs.nctu.edu.tw'
 alias	tsun1='ssh -24CA changlp@tsun1.cs.nctu.edu.tw'
-alias	tsun2='ssh -24CA changlp@tsun2.cs.nctu.edu.tw'
-alias	tsun3='ssh -24CA changlp@tsun3.cs.nctu.edu.tw'
-alias	tsun4='ssh -24CA changlp@tsun4.cs.nctu.edu.tw'
 alias	linux0='ssh -24CA changlp@linux0.cs.nctu.edu.tw'
 alias	linux1='ssh -24CA changlp@linux1.cs.nctu.edu.tw'
 alias	linux2='ssh -24CA changlp@linux2.cs.nctu.edu.tw'
