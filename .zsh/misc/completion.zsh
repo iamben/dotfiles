@@ -1,4 +1,8 @@
 # Completion
+
+# Cache
+zstyle ':completion:*' use-cache on
+
 # since error correction can be invoked by ^Xc, there's no need to set it again.
 zstyle ':completion:*' menu select
 

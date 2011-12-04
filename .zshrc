@@ -9,7 +9,7 @@ zstyle :compinstall filename "$HOME/.zshrc"
 
 autoload -Uz compinit
 autoload -Uz vcs_info
-compinit
+compinit -D
 # End of lines added by compinstall
 
 #setopts
