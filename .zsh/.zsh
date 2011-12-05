@@ -1,1 +1,0 @@
-/home/iamben/.confVCS/.zsh

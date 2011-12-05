@@ -1,4 +1,8 @@
 # Completion
+
+# Cache
+zstyle ':completion:*' use-cache on
+
 # since error correction can be invoked by ^Xc, there's no need to set it again.
 zstyle ':completion:*' menu select
 
@@ -7,7 +11,7 @@ zstyle ':completion:*:match:*' original only
 zstyle ':completion::prefix-1:*' completer _complete
 zstyle ':completion:predict:*' completer _complete
 zstyle ':completion:incremental:*' completer _complete _correct
-zstyle ':completion:*' completer _complete _prefix _correct _prefix _match _approximate
+zstyle ':completion:*' completer _complete _prefix _correct _match _approximate
 
 # Group matches and Describe
 zstyle ':completion:*' verbose 'yes'
@@ -22,3 +26,6 @@ zstyle ':completion:*:corrections' format $'--\e[01;33m %d \e[0m-- (errors %e)'
 
 # show sections in manuals
 zstyle ':completion:*:manuals' separate-sections 'yes'
+
+# kill
+zstyle ':completion:*:kill:*' force-list always

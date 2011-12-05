@@ -4,7 +4,7 @@ rprompt_vcs_setup () {
  
   local -A pc
  
-  pc['vcs']=${1:-'blue'}
+  pc['vcs']=${1:-'yellow'}
   pc['normal']=${2:-'grey'}
  
  
