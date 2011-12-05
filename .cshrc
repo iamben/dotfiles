@@ -13,9 +13,8 @@ endif
 setenv	EDITOR	vim
 setenv	PAGER	less
 set	autolist
+
 complete sudo 'p/1/c/'
-complete man 'p/1/c/'
-complete which 'p/1/c/'
 
 #home , end , and delete key mapping
 if( $?term ) then
@@ -65,7 +64,9 @@ if( -f $HOME/.csh/hosts/$HOST.cshrc ) then
 endif
 
 #aliases
-if( -f $HOME/.csh/aliases ) then
-	source $HOME/.csh/aliases
-endif
+foreach src ($HOME/.csh/misc/*)
+	if ( -f $src ) then
+		source $src
+	endif
+end
 
