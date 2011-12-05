@@ -37,8 +37,8 @@ bindkey "^[[D" prev
 
 # C-a b : encoding big5
 # C-a u : encoding utf8
-bind b encoding big5 utf8
-bind u encoding utf8 utf8
+bind b encoding big5
+bind u encoding utf8
 
 # C-n $num : move current window to number $num
 bind -c move 0 number 0
