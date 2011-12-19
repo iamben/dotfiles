@@ -22,7 +22,7 @@ set tags=./.tags,~/.STLtags
 set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
-set fileencodings=ucs-bom,utf-8,sjis,prc,big5,latin1
+set fileencodings=ucs-bom,utf-8,big5,sjis,prc,latin1
 syntax on
 
 " highlight
