@@ -16,9 +16,6 @@
 [submodule ".vim/bundle/git-vim"]
 	path = .vim/bundle/git-vim
 	url = https://github.com/motemen/git-vim.git
-[submodule ".vim/bundle/Python-Syntax"]
-	path = .vim/bundle/Python-Syntax
-	url = https://github.com/vim-scripts/Python-Syntax.git
 [submodule ".vim/bundle/AutoComplPop"]
 	path = .vim/bundle/AutoComplPop
 	url = https://github.com/vim-scripts/AutoComplPop.git
