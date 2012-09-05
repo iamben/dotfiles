@@ -28,3 +28,6 @@
 [submodule "external/vim/tomorrow-theme"]
 	path = external/vim/tomorrow-theme
 	url = https://github.com/chriskempson/tomorrow-theme
+[submodule "external/vim/sparkup"]
+	path = external/vim/sparkup
+	url = https://github.com/rstacruz/sparkup.git
