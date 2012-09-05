@@ -1,6 +1,6 @@
 #!/bin/sh
 CONFLIST=".csh .cshrc .gitconfig .muttrc .screenrc .ssh/authorized_keys .vim .vimrc .zsh .zshrc bin/setScreenSshAgent .erlang"
-REPO="`pwd | awk -F/ '{ print $NF }'`"
+REPO=`basename $PWD`
 
 Usage() {
     echo "Usage: $0 <action>"
