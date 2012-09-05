@@ -9,3 +9,4 @@
 .zsh
 .zshrc
 bin/setScreenSshAgent
+.erlang

@@ -1,0 +1,1 @@
+io:format("Erlang running with local .erlang~n").
