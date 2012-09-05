@@ -1,27 +1,27 @@
-[submodule ".zsh/misc/zsh-syntax-highlighting"]
-	path = .zsh/misc/zsh-syntax-highlighting
+[submodule "external/zsh/zsh-syntax-highlighting"]
+	path = external/zsh/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-[submodule ".vim/bundle/vim-easymotion"]
-	path = .vim/bundle/vim-easymotion
+[submodule "external/vim/vim-easymotion"]
+	path = external/vim/vim-easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git
-[submodule ".vim/bundle/gundo.vim"]
-	path = .vim/bundle/gundo.vim
+[submodule "external/vim/gundo.vim"]
+	path = external/vim/gundo.vim
 	url = git://github.com/sjl/gundo.vim.git
-[submodule ".vim/bundle/neocomplcache"]
-	path = .vim/bundle/neocomplcache
+[submodule "external/vim/neocomplcache"]
+	path = external/vim/neocomplcache
 	url = git://github.com/Shougo/neocomplcache.git
-[submodule ".vim/bundle/snipmate.vim"]
-	path = .vim/bundle/snipmate.vim
+[submodule "external/vim/snipmate.vim"]
+	path = external/vim/snipmate.vim
 	url = git://github.com/msanders/snipmate.vim.git
-[submodule ".vim/bundle/git-vim"]
-	path = .vim/bundle/git-vim
+[submodule "external/vim/git-vim"]
+	path = external/vim/git-vim
 	url = https://github.com/motemen/git-vim.git
-[submodule ".vim/bundle/AutoComplPop"]
-	path = .vim/bundle/AutoComplPop
+[submodule "external/vim/AutoComplPop"]
+	path = external/vim/AutoComplPop
 	url = https://github.com/vim-scripts/AutoComplPop.git
-[submodule ".vim/bundle/tagbar"]
-	path = .vim/bundle/tagbar
+[submodule "external/vim/tagbar"]
+	path = external/vim/tagbar
 	url = https://github.com/majutsushi/tagbar.git
-[submodule ".vim/bundle/tabular"]
-	path = .vim/bundle/tabular
+[submodule "external/vim/tabular"]
+	path = external/vim/tabular
 	url = https://github.com/godlygeek/tabular.git
