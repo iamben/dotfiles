@@ -1,0 +1,29 @@
+#!/bin/sh
+CONFLIST=".csh .cshrc .gitconfig .muttrc .screenrc .ssh/authorized_keys .vim .vimrc .zsh .zshrc bin/setScreenSshAgent .erlang"
+REPO="`pwd | awk -F/ '{ print $NF }'`"
+
+Usage() {
+    echo "Usage: $0 <action>"
+    echo "action: (i)install/(u)ninstall"
+    #echo "Repo = ${REPO}"
+}
+
+if [ -z "$1" ]; then
+    Usage
+    exit
+fi
+
+for link in ${CONFLIST}; do
+    if [ "$1" = "i" ]; then
+	echo "Linking $link ..."
+	ln -s ~/${REPO}/$link ~/$link
+    elif [ "$1" = "u" ]; then
+	echo "Removing $link ..."
+	unlink ~/$link
+    else
+        echo "Unsupported operation: $1"
+	Usage
+	echo "Exiting..."
+	exit
+    fi
+done
