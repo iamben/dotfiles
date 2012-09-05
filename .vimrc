@@ -65,6 +65,7 @@ autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
 " python smart ident
 " autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 au BufRead,BufNewFile *.py set ai et nu sw=4 ts=4 tw=79
+au BufRead,BufNewFile *.erl set ai et nu sw=4 ts=4 tw=79
 
 " Neocomplete
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
