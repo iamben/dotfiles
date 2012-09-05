@@ -56,9 +56,9 @@ set statusline+=%4*%=\ %6*%y%4*\ %3*%l%4*,\ %3*%c%4*\ \<\ %2*%P%4*\ \>
 " (up)tab line
 set showtabline=2
 
-"256 color scheme by yzlin
+"256 color scheme
 set t_Co=256
-colorscheme yzlin256
+colorscheme Tomorrow-Night-Bright
 
 " auto remove ttrailing spaces in python scripts(.py)
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
