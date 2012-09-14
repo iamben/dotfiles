@@ -31,3 +31,6 @@
 [submodule "external/vim/sparkup"]
 	path = external/vim/sparkup
 	url = https://github.com/rstacruz/sparkup.git
+[submodule "external/vim/vim-powerline"]
+	path = external/vim/vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline.git
