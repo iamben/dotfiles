@@ -6,6 +6,7 @@ export LESS="-Rf"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LSCOLORS="Exfxcxdxbxegedabagacad"
+export PYTHONSTARTUP="$HOME/.pythonstartup"
 
 HOST=$HOST $HOME/bin/setScreenSshAgent
 if [ -n "$WINDOW" ]; then
