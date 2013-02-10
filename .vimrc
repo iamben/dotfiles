@@ -64,3 +64,7 @@ au BufRead,BufNewFile *.erl set ai et nu sw=4 ts=4 tw=79
 
 " Neocomplete
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+
+" 80 column hl
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
