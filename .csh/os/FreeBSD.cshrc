@@ -9,4 +9,4 @@ setenv	LANG	en_US.UTF-8
 $HOME/bin/ssh-auth-sock
 if ($?WINDOW) then
     setenv SSH_AUTH_SOCK "$HOME/.auth/ssh-agent-sock-$HOST"
-fi
+endif
