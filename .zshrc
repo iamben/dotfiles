@@ -19,7 +19,6 @@ setopt correct
 
 #vars
 PROMPT="(%T) %{[1;34m%}%n%{[m%}@%{[1;32m%}%m%{[m%}:%{[1;31m%}%~%{[m%} %# "
-TERMCAP='xterm|xterm-color:Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm:tc=xterm-xfree86:'
 EDITOR='vim'
 PAGER='less'
 READNULLCMD='less'
