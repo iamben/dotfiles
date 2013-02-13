@@ -1,5 +1,5 @@
 #!/bin/sh
-CONFLIST=".csh .cshrc .gitconfig .muttrc .screenrc .ssh/authorized_keys .vim .vimrc .zsh .zshrc bin/setScreenSshAgent .erlang .pythonstartup"
+CONFLIST=".csh .cshrc .gitconfig .muttrc .screenrc .ssh/authorized_keys .vim .vimrc .zsh .zshrc .erlang .pythonstartup .tmux.conf bin/ssh-auth-sock"
 REPO=`basename $PWD`
 
 Usage() {

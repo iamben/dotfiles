@@ -4,7 +4,8 @@ export LANG=en_US.UTF-8
 alias   g='/bin/grep --mmap --color=always'
 alias   ls='/bin/ls --color=auto'
 
-HOST=$HOST $HOME/bin/setScreenSshAgent
+# agent forwarding
+HOST=$HOST $HOME/bin/ssh-auth-sock
 if [ -n "$WINDOW" ]; then
-	SSH_AUTH_SOCK="$HOME/.screen/ssh-agent-screen-$HOST"
+    export SSH_AUTH_SOCK="$HOME/.auth/ssh-agent-sock-$HOST"
 fi

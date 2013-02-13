@@ -1,0 +1,12 @@
+#!/bin/sh
+AUTHDIR=$HOME/.auth
+
+if [ -n "$SSH_AUTH_SOCK" ]; then
+    if [ ! -d "${AUTHDIR}" ]; then
+        /bin/mkdir -p "${AUTHDIR}"
+    fi
+
+    if [ -z "$WINDOW" ]; then
+       /bin/ln -fs "$SSH_AUTH_SOCK" "${AUTHDIR}/ssh-agent-sock-$HOST"
+    fi
+fi
