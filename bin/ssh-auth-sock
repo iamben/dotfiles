@@ -6,7 +6,8 @@ if [ -n "$SSH_AUTH_SOCK" ]; then
         /bin/mkdir -p "${AUTHDIR}"
     fi
 
-    if [ -z "$WINDOW" ]; then
+    # not screen nor tmux
+    if [ -z "$WINDOW" -a -z "$TMUX" ]; then
        /bin/ln -fs "$SSH_AUTH_SOCK" "${AUTHDIR}/ssh-agent-sock-$HOST"
     fi
 fi

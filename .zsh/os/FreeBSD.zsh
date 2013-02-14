@@ -7,8 +7,8 @@ export LANG=en_US.UTF-8
 export LSCOLORS="Exfxcxdxbxegedabagacad"
 export PYTHONSTARTUP="$HOME/.pythonstartup"
 
-# agent forwarding
+# agent forwarding, for screen and tmux
 HOST=$HOST $HOME/bin/ssh-auth-sock
-if [ -n "$WINDOW" ]; then
+if [ -n "$WINDOW" -o -n "$TMUX" ]; then
     export SSH_AUTH_SOCK="$HOME/.auth/ssh-agent-sock-$HOST"
 fi
