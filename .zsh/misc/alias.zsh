@@ -2,6 +2,7 @@
 #   Global alias
 ##########################
 #alias	pwd='pwd -P'
+alias tmux='tmux -2'
 
 ##########################
 #   ssh alias
