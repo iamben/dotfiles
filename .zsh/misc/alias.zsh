@@ -9,7 +9,7 @@ alias tmux='tmux -2'
 ##########################
 #misc
 alias	iamben='ssh -24CA iamben@Archon.iamben.csie.net'
-alias	neptune='ssh -24CA iamben@Neptune.iamben.csie.net'
+alias	neptune='ssh -24CA -p222 iamben@Neptune.iamben.csie.net'
 alias   win='ssh -24CA iamben@win.cs.nctu.edu.tw'
 
 #cs
