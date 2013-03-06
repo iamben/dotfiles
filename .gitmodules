@@ -37,3 +37,6 @@
 [submodule "external/vim/vim-fugitive"]
 	path = external/vim/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "external/vim/vim-gitgutter"]
+	path = external/vim/vim-gitgutter
+	url = git://github.com/airblade/vim-gitgutter.git
