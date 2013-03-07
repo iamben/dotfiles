@@ -46,18 +46,20 @@ zle -N tcsh-backward-delete-word
 zle -N tcsh-backward-word
 zle -N tcsh-forward-word
  
-#key binding
-bindkey "[1~" beginning-of-line   # Home
-bindkey "[4~" end-of-line	    # End
-bindkey "[2~" overwrite-mode	    # Ins
-bindkey "[3~" delete-char	    # Delete
-bindkey "[A" history-search-backward	#up
-bindkey "[B" history-search-forward	#down
-# for escape backspace (delete a word) behavior similar to tcsh
+# key binding
+bindkey "[1~" beginning-of-line	# Home
+bindkey "[4~" end-of-line		# End
+bindkey "[2~" overwrite-mode		# Ins
+bindkey "[3~" delete-char		# Delete
+bindkey "F" move-forward-char		# Forward char (original: ^F)
+bindkey "B" move-backward-char	# Backward char ((original: ^B))
+bindkey "[A" history-beginning-search-backward #up
+bindkey "[B" history-beginning-search-forward #down
+
+# Simulate tcsh
 bindkey '^W' tcsh-backward-delete-word
-#for ctrl leftarrow and rightarrow navigation
-bindkey '^E' tcsh-backward-word
-bindkey 'F' tcsh-forward-word
+bindkey '^F' tcsh-forward-word
+bindkey '^B' tcsh-backward-word
 
 #os configuration
 if [ -f $HOME/.zsh/os/`uname -s`.zsh ]; then
