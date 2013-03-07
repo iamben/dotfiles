@@ -1,7 +1,7 @@
 #
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-alias   g='/bin/grep --mmap --color=always'
+alias   g='/bin/grep --color=always'
 alias   ls='/bin/ls --color=auto'
 
 # agent forwarding, for screen and tmux

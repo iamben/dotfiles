@@ -1,6 +1,6 @@
 #
 alias   ls='/bin/ls -G'
-alias   g='/usr/bin/grep --mmap --color=always'
+alias   g='/usr/bin/grep --color=always'
 export LESS="-Rf"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
