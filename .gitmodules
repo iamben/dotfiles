@@ -10,9 +10,6 @@
 [submodule "external/vim/neocomplcache"]
 	path = external/vim/neocomplcache
 	url = git://github.com/Shougo/neocomplcache.git
-[submodule "external/vim/snipmate.vim"]
-	path = external/vim/snipmate.vim
-	url = git://github.com/msanders/snipmate.vim.git
 [submodule "external/vim/git-vim"]
 	path = external/vim/git-vim
 	url = https://github.com/motemen/git-vim.git
@@ -40,3 +37,6 @@
 [submodule "external/vim/vim-gitgutter"]
 	path = external/vim/vim-gitgutter
 	url = git://github.com/airblade/vim-gitgutter.git
+[submodule "external/vim/ultisnips"]
+	path = external/vim/ultisnips
+	url = git://github.com/SirVer/ultisnips.git

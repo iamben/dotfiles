@@ -68,3 +68,8 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 " 80 column hl
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
+
+" YCM rocks! ultisnip should change its way triggering
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
