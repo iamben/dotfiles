@@ -62,6 +62,8 @@ case $1 in
     echo "Unsupported operation: $1"
     Usage
     echo "Exiting..."
-    exit
+    exit 1
     ;;
 esac
+
+exit 0
