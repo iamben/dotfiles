@@ -11,7 +11,7 @@ Usage() {
 
 BackupExistingConf() {
     if [ -e "$1" -a ! -L "$1" ]; then
-	echo "Backup: $1 -> $1.bak"
+	echo "Backingi up regular file: $1 -> $1.bak"
         mv -f "$1" "$1.bak"
     fi
 }
@@ -19,7 +19,7 @@ BackupExistingConf() {
 ProvisionInstallDirectory() {
     for conf in ${CONFLIST}; do
         if [ "${conf##*/}" != "${conf}" -a ! -e "${HOME}/${conf%/*}" ]; then # link installed into a dir
-            echo "Pre-provisioning: ${HOME}/${conf%/*}"
+            echo "Pre-provisioning directory: ${HOME}/${conf%/*}"
             mkdir -p "${HOME}/${conf%/*}"
 	fi
     done
@@ -43,7 +43,7 @@ case $1 in
         # be sure to backup
 	BackupExistingConf "${HOME}/${link}"
 
-	echo "Installing link: ${HOME}/${link}"
+	echo "Installing link: ${HOME}/${link} -> ${HOME}/${REPO}/${link}"
 	ln -sf "${HOME}/${REPO}/${link}" "${HOME}/${link}"
 	echo ${HOME}/${link} >> ${PLISTFILE}
     done
@@ -51,7 +51,7 @@ case $1 in
 [Uu]|[Uu][Nn][Ii][Nn][Ss][Tt][Aa][Ll][Ll])
     if [ -f ${PLISTFILE} ]; then
         for link in `cat ${PLISTFILE}`; do
-            echo "Removing ${link} ..."
+            echo "Removing: ${link}"
             unlink ${link}
         done
 
