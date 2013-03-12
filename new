@@ -44,7 +44,7 @@ case $1 in
 	BackupExistingConf "${HOME}/${link}"
 
 	echo "Installing link: ${HOME}/${link} -> ${HOME}/${REPO}/${link}"
-	ln -sf "${HOME}/${REPO}/${link}" "${HOME}/${link}"
+	ln -sfn "${HOME}/${REPO}/${link}" "${HOME}/${link}"
 	echo ${HOME}/${link} >> ${PLISTFILE}
     done
     ;;
