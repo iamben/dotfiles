@@ -11,7 +11,7 @@ Usage() {
 
 BackupExistingConf() {
     if [ -e "$1" -a ! -L "$1" ]; then
-	echo "Backingi up regular file: $1 -> $1.bak"
+        echo "Backingi up regular file: $1 -> $1.bak"
         mv -f "$1" "$1.bak"
     fi
 }
@@ -21,7 +21,7 @@ ProvisionInstallDirectory() {
         if [ "${conf##*/}" != "${conf}" -a ! -e "${HOME}/${conf%/*}" ]; then # link installed into a dir
             echo "Pre-provisioning directory: ${HOME}/${conf%/*}"
             mkdir -p "${HOME}/${conf%/*}"
-	fi
+        fi
     done
 }
 
@@ -41,11 +41,11 @@ case $1 in
     # install them
     for link in ${CONFLIST}; do
         # be sure to backup
-	BackupExistingConf "${HOME}/${link}"
+        BackupExistingConf "${HOME}/${link}"
 
-	echo "Installing link: ${HOME}/${link} -> ${HOME}/${REPO}/${link}"
-	ln -sfn "${HOME}/${REPO}/${link}" "${HOME}/${link}"
-	echo ${HOME}/${link} >> ${PLISTFILE}
+        echo "Installing link: ${HOME}/${link} -> ${HOME}/${REPO}/${link}"
+        ln -sfn "${HOME}/${REPO}/${link}" "${HOME}/${link}"
+        echo ${HOME}/${link} >> ${PLISTFILE}
     done
     ;;
 [Uu]|[Uu][Nn][Ii][Nn][Ss][Tt][Aa][Ll][Ll])
