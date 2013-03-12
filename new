@@ -1,8 +1,9 @@
 #!/bin/sh
+PATH=/bin:/usr/bin
+
 CONFLIST=".csh .cshrc .gitconfig .muttrc .screenrc .ssh/authorized_keys .vim .vimrc .zsh .zshrc .erlang .pythonstartup .tmux.conf bin/ssh-auth-sock"
-PLISTFILE="${PWD}/plist"
-# Use $HOME/$REPO instead of $PWD, so this works even if $HOME is a symlink
-REPO=${PWD##*/} # basename(1) equivalent, for wroking on iPad
+SOURCEDIR=""
+PLISTDIR=""
 
 Usage() {
     echo "Usage: $0 <action>"
@@ -33,7 +34,14 @@ fi
 case $1 in
 [Ii]|[Ii][Nn][Ss][Tt][Aa][Ll][Ll])
     # uninstall first
-    $0 uninstall
+    $0 uninstall $2
+
+    # determine source-dir
+    SOURCEDIR="$2"
+    if [ -z "${SOURCEDIR}" ]; then
+        SOURCEDIR="`pwd -L`"
+    fi
+    echo "Install using source-dir: ${SOURCEDIR}"
 
     # provision install dir first
     ProvisionInstallDirectory
@@ -43,23 +51,30 @@ case $1 in
         # be sure to backup
         BackupExistingConf "${HOME}/${link}"
 
-        echo "Installing link: ${HOME}/${link} -> ${HOME}/${REPO}/${link}"
-        ln -sfn "${HOME}/${REPO}/${link}" "${HOME}/${link}"
-        echo ${HOME}/${link} >> ${PLISTFILE}
+        echo "Installing link: ${HOME}/${link} -> ${SOURCEDIR}/${link}"
+        ln -sfn "${SOURCEDIR}/${link}" "${HOME}/${link}"
+        echo ${HOME}/${link} >> ${SOURCEDIR}/plist
     done
     ;;
 [Uu]|[Uu][Nn][Ii][Nn][Ss][Tt][Aa][Ll][Ll])
-    if [ -f ${PLISTFILE} ]; then
-        for link in `cat ${PLISTFILE}`; do
+    # determine plist-dir
+    PLISTDIR="$2"
+    if [ -z "${PLISTDIR}" ]; then
+        PLISTDIR="`pwd -L`"
+    fi
+
+    if [ -f ${PLISTDIR}/plist ]; then
+        echo "Uninstall using plist file: ${PLISTDIR}/plist"
+        for link in `cat ${PLISTDIR}/plist`; do
             if [ -L "${link}" ]; then
                 echo "Removing installed component: ${link}"
-                unlink -f ${link}
+                unlink ${link}
             else
                 echo "Component: ${link} has been changed, ignoring..."
             fi
         done
 
-        rm -f ${PLISTFILE}
+        rm -f ${PLISTDIR}/plist
     fi
 
     echo "To completely remove these configurations, please manually remove ${PWD}"
