@@ -6,8 +6,11 @@ SOURCEDIR=""
 PLISTDIR=""
 
 Usage() {
-    echo "Usage: $0 <action>"
-    echo "action: (i)install/(u)ninstall"
+    echo "Usage: $0 install [source-dir]"
+    echo "Usage: $0 uninstall [plist-dir]"
+    echo
+    echo "source-dir: directory for config source (default: \$PWD)"
+    echo "plist-dir: directory contains plist (default: source-dir)"
 }
 
 BackupExistingConf() {
