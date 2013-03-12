@@ -51,12 +51,18 @@ case $1 in
 [Uu]|[Uu][Nn][Ii][Nn][Ss][Tt][Aa][Ll][Ll])
     if [ -f ${PLISTFILE} ]; then
         for link in `cat ${PLISTFILE}`; do
-            echo "Removing: ${link}"
-            unlink ${link}
+            if [ -L "${link}" ]; then
+                echo "Removing installed component: ${link}"
+                unlink -f ${link}
+            else
+                echo "Component: ${link} has been changed, ignoring..."
+            fi
         done
 
         rm -f ${PLISTFILE}
     fi
+
+    echo "To completely remove these configurations, please manually remove ${PWD}"
     ;;
 *)
     echo "Unsupported operation: $1"
