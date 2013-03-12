@@ -15,7 +15,7 @@ Usage() {
 
 BackupExistingConf() {
     if [ -e "$1" -a ! -L "$1" ]; then
-        echo "Backingi up regular file: $1 -> $1.bak"
+        echo "Backing up regular file: $1 -> $1.bak"
         mv -f "$1" "$1.bak"
     fi
 }
@@ -71,7 +71,13 @@ case $1 in
         for link in `cat ${PLISTDIR}/plist`; do
             if [ -L "${link}" ]; then
                 echo "Removing installed component: ${link}"
-                unlink ${link}
+                unlink "${link}"
+
+                # revert the backup
+                if [ -e "${link}.bak" ]; then
+                    echo "Reverting backup: ${link}.bak"
+                    mv -n "${link}.bak" "${link}"
+                fi
             else
                 echo "Component: ${link} has been changed, ignoring..."
             fi
