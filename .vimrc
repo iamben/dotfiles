@@ -4,14 +4,10 @@ call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
 " tab (http://py.vaults.ca/~x/python_and_vim.html)
-"set tabstop=8
-"set softtabstop=8
-"set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set noexpandtab
-set smarttab
-set autoindent
-set smartindent
-set cindent
 
 set nocompatible
 set bs=2
