@@ -1,8 +1,8 @@
 #
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-alias   g='/usr/bin/grep --color=always'
-alias   ls='/bin/ls --color=auto'
+alias   g='grep --color=always'
+alias   ls='ls --color=auto'
 
 # agent forwarding, for screen and tmux
 HOST=$HOST $HOME/bin/ssh-auth-sock
