@@ -34,3 +34,6 @@
 [submodule "external/vim/ultisnips"]
 	path = external/vim/ultisnips
 	url = git://github.com/SirVer/ultisnips.git
+[submodule "external/vim/YouCompleteMe"]
+	path = external/vim/YouCompleteMe
+	url = git://github.com/Valloric/YouCompleteMe.git
