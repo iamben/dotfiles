@@ -7,15 +7,9 @@
 [submodule "external/vim/gundo.vim"]
 	path = external/vim/gundo.vim
 	url = git://github.com/sjl/gundo.vim.git
-[submodule "external/vim/neocomplcache"]
-	path = external/vim/neocomplcache
-	url = git://github.com/Shougo/neocomplcache.git
 [submodule "external/vim/git-vim"]
 	path = external/vim/git-vim
 	url = git://github.com/motemen/git-vim.git
-[submodule "external/vim/AutoComplPop"]
-	path = external/vim/AutoComplPop
-	url = git://github.com/vim-scripts/AutoComplPop.git
 [submodule "external/vim/tagbar"]
 	path = external/vim/tagbar
 	url = git://github.com/majutsushi/tagbar.git
