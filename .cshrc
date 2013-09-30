@@ -1,4 +1,6 @@
-if ((-f /bin/zsh || -f /usr/local/bin/zsh) && { tty -s } ) then
+if(! $?prompt) exit	# this chain only includes interactive settings
+
+if (-f /bin/zsh || -f /usr/local/bin/zsh) then
     echo "==Zsh Detected=="
     echo "Type anything to use original shell or enter for zsh: "
     if ( "$<" == "" ) then
