@@ -74,4 +74,11 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 " YCM
 let g:ycm_add_preview_to_completeopt=1
 let g:ycm_autoclose_preview_window_after_completion=1
+let g:ycm_autoclose_preview_window_after_insertion=1
 let g:ycm_complete_in_comments=1
+let g:ycm_confirm_extra_conf=0
+let g:ycm_filetype_whitelist = { 'python': 1, 'cpp': 1, 'c': 1 }
+
+" Gitgutter
+nnoremap gj :GitGutterNextHunk<CR>
+nnoremap gk :GitGutterPrevHunk<CR>
